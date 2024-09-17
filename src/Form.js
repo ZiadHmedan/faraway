@@ -11,7 +11,10 @@ export default function Form({ onAddItem }) {
       description: desc,
       packed: false,
     };
-    onAddItem(newItem);
+    if(desc !== ""){
+
+      onAddItem(newItem);
+    }
 
     setQuantity(1);
     setDesc("");
@@ -40,7 +43,7 @@ export default function Form({ onAddItem }) {
         onChange={handleDescChange}
         value={desc}
       ></input>
-      <button>ADD</button>
+      <button  >ADD</button>
     </form>
   );
 }
